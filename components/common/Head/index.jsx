@@ -12,7 +12,7 @@ const Head = ({ title, description }) => (
 		<meta name="description" content={description || ''} />
 		<meta name="viewport" content="width=device-width, inititial-scale=1" />
 		<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
-		<link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico" />
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 	</NextHead>
 );
 
