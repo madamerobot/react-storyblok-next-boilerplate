@@ -1,7 +1,7 @@
 /* dependencies */
 import fetch from 'isomorphic-unfetch';
 
-/* layouts */
+/* layout */
 import DefaultLayout from '../components/layouts/DefaultLayout';
 
 /* Helper function to fetch data */
@@ -9,14 +9,14 @@ function fetcher(url) {
 	return fetch(url).then((r) => r.json());
 }
 
-// This route gets hit when our user appends a slug to
-// the url and therefore the page request, e.g. your-site.com/about
+/* This route gets hit when our user appends a slug to
+the url and therefore the page request, e.g. your-site.com/about */
 const SlugPage = ({ data }) => {
 	const { content } = data;
+	const titleElement = content.body.find((item) => item.title);
 	return (
 		<DefaultLayout>
-			<h1>Slug Page</h1>
-			<p>{content}</p>
+			<h1>{titleElement.title}</h1>
 		</DefaultLayout>
 	);
 };
