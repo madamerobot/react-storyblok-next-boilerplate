@@ -1,7 +1,5 @@
-# Leela
-The Platform for Leela.
-
-This is the main-repo for the Leela project (https://digital.design).
+# FED21 Data Interaction
+Boilerplate using React, Next.js and Storyblok.
 
 ## Prerequisites
 - NodeJS 10.X+
