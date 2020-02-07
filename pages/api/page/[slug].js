@@ -1,13 +1,14 @@
 export default async (req, res) => {
 	/* Here we are extracting the slug from the request,
-    so that we know which url our user wants to access */
+    so that we can later fetch the right data from Storyblok */
 	const { query: { slug } } = req;
 	try {
-		// Make actual Storybok call
-		const pageData = { content: 'Hallo' };
+		// To Do: Make actual Storybok call, using 'slug'
+		/* For now we are simply returning a dummy data object */
+		const data = { content: `Looking for /${slug}?` };
 		res.setHeader('Content-Type', 'application/json');
 		res.statusCode = 200;
-		res.end(JSON.stringify(pageData));
+		res.end(JSON.stringify(data));
 	} catch (error) {
 		res.setHeader('Content-Type', 'application/json');
 		res.statusCode = 500;
