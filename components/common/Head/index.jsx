@@ -1,6 +1,10 @@
 import React from 'react';
 import NextHead from 'next/head';
 
+// This is the html <header> element which you'll need
+// your site to have to comply with web standards
+// This is NOT a visual header
+
 const Head = ({ title, description }) => (
 	<NextHead>
 		<meta charSet="UTF-8" />
