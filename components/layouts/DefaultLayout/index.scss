@@ -1,0 +1,14 @@
+.root {
+	h1 {
+		font-size: 32px;
+		font-family: 'Poppins', sans-serif;
+		color: blue;
+		padding-bottom: 18px;
+	}
+}
+
+.pageWrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 4%;
+}
