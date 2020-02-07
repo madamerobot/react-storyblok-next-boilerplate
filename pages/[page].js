@@ -13,10 +13,10 @@ function fetcher(url) {
 the url and therefore the page request, e.g. your-site.com/about */
 const SlugPage = ({ data }) => {
 	const { content } = data;
+	const titleElement = content.body.find((item) => item.title);
 	return (
 		<DefaultLayout>
-			<h1>Slug Page</h1>
-			<p>{content}</p>
+			<h1>{titleElement.title}</h1>
 		</DefaultLayout>
 	);
 };

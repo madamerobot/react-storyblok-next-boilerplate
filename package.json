@@ -17,7 +17,6 @@
 		"react": "^16.12.0",
 		"react-dom": "^16.12.0",
 		"storyblok-js-client": "^2.0.12",
-		"storyblok-node-client": "^1.0.2",
 		"swr": "^0.1.16"
 	}
 }
