@@ -3,7 +3,7 @@ export default async (req, res) => {
     so that we can later fetch the right data from Storyblok */
 	const { query: { slug } } = req;
 	try {
-		// To Do: Make actual Storybok call, using 'slug'
+		/* To Do: Make actual Storybok call, using 'slug' */
 		/* For now we are simply returning a dummy data object */
 		const data = { content: `Looking for /${slug}?` };
 		res.setHeader('Content-Type', 'application/json');
