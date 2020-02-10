@@ -1,5 +1,8 @@
+/* styles */
 import style from './index.scss';
 import resets from './styleReset.scss';
+
+/* components */
 import Head from '../../common/Head';
 
 const DefaultLayout = (props) => {

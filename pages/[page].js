@@ -4,6 +4,10 @@ import fetch from 'isomorphic-unfetch';
 /* layout */
 import DefaultLayout from '../components/layouts/DefaultLayout';
 
+/* components */
+import HeadlineModule from '../components/modules/HeadlineModule';
+import ParagraphModule from '../components/modules/ParagraphModule';
+
 /* Helper function to fetch data */
 function fetcher(url) {
 	return fetch(url).then((r) => r.json());
@@ -13,10 +17,13 @@ function fetcher(url) {
 the url and therefore the page request, e.g. your-site.com/about */
 const SlugPage = ({ data }) => {
 	const { content } = data;
-	const titleElement = content.body.find((item) => item.title);
+	const headlineModuleData = content.body.find((item) => item.component === 'Headline Module');
+	const paragraphModuleData = content.body.find((item) => item.component === 'Paragraph Module');
+	const paragraphTextContent = paragraphModuleData.copy.content.map((paragraph) => paragraph.content[0].text);
 	return (
 		<DefaultLayout>
-			<h1>{titleElement.title}</h1>
+			{headlineModuleData ? <HeadlineModule title={headlineModuleData.title} /> : null}
+			{paragraphModuleData ? <ParagraphModule copy={paragraphTextContent} /> : null}
 		</DefaultLayout>
 	);
 };
