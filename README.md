@@ -25,6 +25,10 @@ Available slugs (defined by Storyblok):
 - [Introduction to Storyblok](https://www.storyblok.com/docs/Prologue/Introduction)
 - [Advanced - The Complete Guide to Build a Full Blown Multilanguage Website with Next.js](https://www.storyblok.com/tp/next-js-react-guide)
 
+## Tooling
+This application uses SASS so that we can write modular CSS.
+The CSS you are writing for each component is going to be scoped to these modules only and not affect any other parts of the site.
+
 ## For later (you will get more info on this):
 
 ## To develop
