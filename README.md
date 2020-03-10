@@ -29,14 +29,14 @@ Available slugs (defined by Storyblok):
 This application uses SASS so that we can write modular CSS.
 The CSS you are writing for each component is going to be scoped to these modules only and not affect any other parts of the site.
 
-## For later (you will get more info on this):
-
-## To develop
+## To run (development)
 ```bash
 now dev
 ```
 
-## To deploy
+## For later (you will get more info on this):
+
+## To deploy to live
 ```bash
 now
 ```
