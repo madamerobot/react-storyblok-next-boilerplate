@@ -14,7 +14,7 @@ const Storyblok = new StoryblokClient({
 
 export default async (req, res) => {
 	/* Here we are extracting the slug from the request,
-    so that we can later fetch the right data from Storyblok */
+	so that we can later fetch the right data from Storyblok */
 	const { query: { slug } } = req;
 
 	/* We are making a request to Storybloks API, using
