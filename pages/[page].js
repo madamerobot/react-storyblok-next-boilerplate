@@ -20,6 +20,7 @@ the url and therefore the page request, e.g. your-site.com/about */
 const SlugPage = ({ data }) => {
   const { content } = data;
   console.log(`🌈 I am getting this content from Storybok`);
+  console.log(content);
   const codeString = JSON.stringify(content);
   /* Now you need to map your own components, I just left the headline module as reference */
   return (
