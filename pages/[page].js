@@ -19,10 +19,13 @@ function fetchUrl(url) {
 the url and therefore the page request, e.g. your-site.com/about */
 const SlugPage = ({ data }) => {
   const { content } = data;
-  console.log(`🌈 I am getting this content from Storybok: ${content}`);
+  console.log(`🌈 I am getting this content from Storybok`);
+  const codeString = JSON.stringify(content);
   /* Now you need to map your own components, I just left the headline module as reference */
   return (
     <DefaultLayout>
+      <h3>🌈 This is what you are getting back from Storyblok: 🌈</h3>
+      <p>{codeString}</p>
       {/* {headlineModuleData ? <HeadlineModule title={headlineModuleData.title} /> : null} */}
     </DefaultLayout>
   );
