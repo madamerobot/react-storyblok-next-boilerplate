@@ -1,18 +1,18 @@
 /* 🌈 Welcome to the server side, where all the fun happens! 🌈 */
 
 /* dependencies */
-const StoryblokClient = require("storyblok-js-client");
+const StoryblokClient = require("storyblok-js-client")
 
 /* Initiating Storyblok client, so that we are 
 connected to our Storyblok account and space.
 Please replace this accessToken with your own one.*/
 const Storyblok = new StoryblokClient({
-  accessToken: "CMevxMzNABuUQdQdNNiWpQtt",
+  accessToken: "CHB0sYueXEekH1ghh8iifQtt",
   cache: {
     clear: "auto",
     type: "memory"
   }
-});
+})
 
 export default async (req, res) => {
   /* 
@@ -28,8 +28,8 @@ export default async (req, res) => {
 	*/
 
   const {
-    query: { slug }
-  } = req;
+    query: {slug}
+  } = req
 
   /* We are making a request to Storybloks API, using
     the Storyblok Client that we've set up before */
@@ -37,18 +37,18 @@ export default async (req, res) => {
     .then(response => {
       const {
         data: {
-          story: { content }
+          story: {content}
         }
-      } = response; /* Same as: const content = data.story.content */
-      const data = { content };
-      res.setHeader("Content-Type", "application/json");
-      res.statusCode = 200;
-      res.end(JSON.stringify(data));
+      } = response /* Same as: const content = data.story.content */
+      const data = {content}
+      res.setHeader("Content-Type", "application/json")
+      res.statusCode = 200
+      res.end(JSON.stringify(data))
     })
     .catch(error => {
-      console.log(error);
-      res.setHeader("Content-Type", "application/json");
-      res.statusCode = 500;
-      res.end(JSON.stringify(`${error.name}: ${error.message}`));
-    });
-};
+      console.log(error)
+      res.setHeader("Content-Type", "application/json")
+      res.statusCode = 500
+      res.end(JSON.stringify(`${error.name}: ${error.message}`))
+    })
+}
