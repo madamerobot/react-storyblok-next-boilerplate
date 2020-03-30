@@ -20,6 +20,7 @@ function fetchUrl(url) {
 the url and therefore the page request, e.g. your-site.com/about */
 const SlugPage = ({data}) => {
   const {content} = data
+
   const imageModuleData = content.components.find(
     item => item.component === "Image Module"
   )
@@ -29,17 +30,16 @@ const SlugPage = ({data}) => {
   const codeString = JSON.stringify(content)
   /* Now you need to map your own components, I just left the headline module as reference */
   return (
-    <DefaultLayout>
-      <h3>🌈 This is what you are getting back from Storyblok: 🌈</h3>
-      <p>{codeString}</p>
-      {/* {headlineModuleData ? <HeadlineModule title={headlineModuleData.title} /> : null} */}
-      {imageModuleData ? (
-        <ImageModule
-          image={imageModuleData.ImageModule}
-          copy={imageModuleData.Copy}
-        />
-      ) : null}
-    </DefaultLayout>
+    <div>
+      <DefaultLayout>
+        {imageModuleData ? (
+          <ImageModule
+            image={imageModuleData.ImageModule}
+            copy={imageModuleData.Copy}
+          />
+        ) : null}
+      </DefaultLayout>
+    </div>
   )
 }
 
