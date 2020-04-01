@@ -2,6 +2,7 @@
 
 /* dependencies */
 import fetch from "isomorphic-unfetch";
+import marked from "marked";
 
 /* layout */
 import DefaultLayout from "../components/layouts/DefaultLayout";
@@ -18,16 +19,30 @@ function fetchUrl(url) {
 /* This route gets hit when our user appends a slug to
 the url and therefore the page request, e.g. your-site.com/about */
 const SlugPage = ({ data }) => {
-  const { content } = data;
-  console.log(`🌈 I am getting this content from Storybok`);
-  console.log(content);
-  const codeString = JSON.stringify(content);
-  /* Now you need to map your own components, I just left the headline module as reference */
+  const {
+    content: { components }
+  } = data;
+  console.log(data);
+  /* Filtering only data for the Headline module */
+  const headlineModuleData = components.find(
+    item => item.component === "Headline Module"
+  );
+  /* Filtering only data for the Paragraph module */
+  const paragraphModuleData = components.find(
+    item => item.component === "Paragraph Module"
+  );
+  /* With our dependency 'marked' we are turning Contentfuls
+  Markdown into HTML Markup */
+  const paragraphModuleDataMarkUp = marked(paragraphModuleData.copy);
+
   return (
     <DefaultLayout>
-      <h3>🌈 This is what you are getting back from Storyblok: 🌈</h3>
-      <p>{codeString}</p>
-      {/* {headlineModuleData ? <HeadlineModule title={headlineModuleData.title} /> : null} */}
+      {headlineModuleData ? (
+        <HeadlineModule title={headlineModuleData.title} />
+      ) : null}
+      {paragraphModuleData ? (
+        <ParagraphModule content={paragraphModuleDataMarkUp} />
+      ) : null}
     </DefaultLayout>
   );
 };
