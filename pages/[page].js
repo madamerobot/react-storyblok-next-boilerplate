@@ -14,6 +14,7 @@ import HmImage from "../components/modules/HmImage"
 import SecondHeadline from "../components/modules/HeadlineModule/SecondHeadline"
 import ThirdHeadline from "../components/modules/HeadlineModule/ThirdHeadline"
 import Sniph from "../components/modules/Sniph"
+import BrickGame from "../components/modules/BrickGame"
 
 /* Helper function to fetch data - do we need this as an extra function? Debatable. 😊 */
 function fetchUrl(url) {
@@ -27,6 +28,9 @@ const SlugPage = ({data}) => {
 
   const imageModuleData = content.components.find(
     item => item.component === "Image Module"
+  )
+  const gameData = content.components.find(
+    item => item.component === "Brick Game"
   )
 
   const sniphData = content.components.find(item => item.component === "Sniph")
@@ -79,14 +83,22 @@ const SlugPage = ({data}) => {
           link={imageModuleData.Link.url}
         />
       ) : null}
+
+      {gameData ? (
+        <BrickGame brickimage={gameData.BrickImage} copy={gameData.copy} />
+      ) : null}
+
       {sniphData ? (
-        <Sniph image1={sniphData.image1} image2={sniphData.image2} />
+        <Sniph
+          headlinesniph={sniphData.HeadlineSniph}
+          image1={sniphData.image1}
+          image2={sniphData.image2}
+        />
       ) : null}
 
       {hmimageData ? (
         <HmImage images={hmimageData.images} image={hmimageData.images2} />
       ) : null}
-
       {/* </DefaultLayout> */}
     </div>
   )

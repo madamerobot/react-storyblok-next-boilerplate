@@ -4,6 +4,10 @@
     "static/development/dll/dll_d6a88dbe3071bd165157.js.map"
   ],
   "pages": {
+    "/": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/[page]": [
       "static/runtime/webpack.js",
       "static/css/styles.chunk.css",
@@ -23,7 +27,7 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/next/dist/pages/_error": [
+    "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

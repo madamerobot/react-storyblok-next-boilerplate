@@ -3,10 +3,10 @@ const ImageModule = ({image, copy, link}) => {
   console.log(image)
   console.log(copy)
   return (
-    <div className={style.root}>
-      <img src={image} />
-      <p>{copy}</p>
-      <link herf="https://github.com/victholerus98/trainbrain.git"></link>
+    <div>
+      <img className={style.img} src={image} />
+      <p className={style.copy}>{copy}</p>
+      <a className={style.link}>{link}</a>
     </div>
   )
 }

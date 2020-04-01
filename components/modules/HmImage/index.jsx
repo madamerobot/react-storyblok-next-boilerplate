@@ -2,9 +2,9 @@ import style from "./index.scss"
 
 const HmImage = ({images, image}) => {
   return (
-    <div className={style.hm}>
-      <img src={images}></img>
-      <img src={image}></img>
+    <div>
+      <img className={style.hm1} src={images}></img>
+      <img className={style.hm2} src={image}></img>
     </div>
   )
 }

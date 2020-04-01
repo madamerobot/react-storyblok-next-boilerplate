@@ -5,7 +5,7 @@ const DefaultPage = () => {
   return (
     <div>
       <h1>Victoria Tholerus</h1>
-      <a href="/project">Projects</a> <a href="/about">about</a>{" "}
+      <a href="/project">Projects</a>
     </div>
   )
 }

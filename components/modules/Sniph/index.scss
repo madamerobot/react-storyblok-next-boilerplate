@@ -1,8 +1,21 @@
 .img1 {
-  width: 500px;
-  height: 600px;
+  width: 50%;
+  height: 60%;
+  position: relative;
+  top: 800px;
 }
 .img2 {
-  width: 500px;
-  height: 600px;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  top: 800px;
+  left: 10px;
+}
+
+.headline {
+  font-size: 2rem;
+  position: relative;
+  text-align: center;
+  right: 150px;
+  top: 850px;
 }
