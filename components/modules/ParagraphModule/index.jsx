@@ -1,12 +1,15 @@
 /* styles */
-import style from './index.scss';
+import style from "./index.scss";
 
-const ParagraphModule = ({ copy }) => {
-	return (
-		<div className={style.root}>
-			<p>{copy}</p>
-		</div>
-	);
+const ParagraphModule = ({ content }) => {
+  function createMarkup() {
+    return { __html: content };
+  }
+  return (
+    <div className={style.root}>
+      <div dangerouslySetInnerHTML={createMarkup()} />
+    </div>
+  );
 };
 
 export default ParagraphModule;
