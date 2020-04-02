@@ -15,6 +15,7 @@ import SecondHeadline from "../components/modules/HeadlineModule/SecondHeadline"
 import ThirdHeadline from "../components/modules/HeadlineModule/ThirdHeadline"
 import Sniph from "../components/modules/Sniph"
 import BrickGame from "../components/modules/BrickGame"
+import Hackathon from "../components/modules/Hackathon"
 
 /* Helper function to fetch data - do we need this as an extra function? Debatable. 😊 */
 function fetchUrl(url) {
@@ -28,6 +29,9 @@ const SlugPage = ({data}) => {
 
   const imageModuleData = content.components.find(
     item => item.component === "Image Module"
+  )
+  const hackathonData = content.components.find(
+    item => item.component === "Hackathon"
   )
   const gameData = content.components.find(
     item => item.component === "Brick Game"
@@ -53,7 +57,7 @@ const SlugPage = ({data}) => {
     item => item.component === "HM Image"
   )
 
-  console.log(sniphData)
+  console.log(hackathonData)
   console.log(`🌈 I am getting this content from Storybok`)
   console.log(content)
   const codeString = JSON.stringify(content)
@@ -81,6 +85,15 @@ const SlugPage = ({data}) => {
           image={imageModuleData.ImageModule}
           copy={imageModuleData.Copy}
           link={imageModuleData.Link.url}
+        />
+      ) : null}
+
+      {hackathonData ? (
+        <Hackathon
+          imggif={hackathonData.gif}
+          imggiff={hackathonData.giff}
+          imggifff={hackathonData.gifff}
+          copy={hackathonData.copy}
         />
       ) : null}
 

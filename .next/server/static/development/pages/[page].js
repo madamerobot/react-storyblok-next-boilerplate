@@ -320,6 +320,90 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./components/modules/Hackathon/index.jsx":
+/*!************************************************!*\
+  !*** ./components/modules/Hackathon/index.jsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ "./components/modules/Hackathon/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/victoriatholerus/Documents/cool-prdject/react-storyblok-next-boilerplate/components/modules/Hackathon/index.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const Hackathon = ({
+  imggif,
+  imggiff,
+  imggifff,
+  copy
+}) => {
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: undefined
+  }, __jsx("img", {
+    className: _index_scss__WEBPACK_IMPORTED_MODULE_1___default.a.gif,
+    src: imggif,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
+  }), __jsx("img", {
+    className: _index_scss__WEBPACK_IMPORTED_MODULE_1___default.a.giff,
+    src: imggiff,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }), __jsx("img", {
+    className: _index_scss__WEBPACK_IMPORTED_MODULE_1___default.a.gifff,
+    src: imggifff,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }), __jsx("p", {
+    className: _index_scss__WEBPACK_IMPORTED_MODULE_1___default.a.copy,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, copy));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Hackathon);
+
+/***/ }),
+
+/***/ "./components/modules/Hackathon/index.scss":
+/*!*************************************************!*\
+  !*** ./components/modules/Hackathon/index.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"gif": "gif___hf-B7",
+	"giff": "giff___1Cp9e",
+	"gifff": "gifff___LLvhl",
+	"copy": "copy___1SH6b"
+};
+
+/***/ }),
+
 /***/ "./components/modules/HeadlineModule/SecondHeadline/index.jsx":
 /*!********************************************************************!*\
   !*** ./components/modules/HeadlineModule/SecondHeadline/index.jsx ***!
@@ -758,6 +842,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_modules_HeadlineModule_ThirdHeadline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/modules/HeadlineModule/ThirdHeadline */ "./components/modules/HeadlineModule/ThirdHeadline/index.jsx");
 /* harmony import */ var _components_modules_Sniph__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/modules/Sniph */ "./components/modules/Sniph/index.jsx");
 /* harmony import */ var _components_modules_BrickGame__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/modules/BrickGame */ "./components/modules/BrickGame/index.jsx");
+/* harmony import */ var _components_modules_Hackathon__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/modules/Hackathon */ "./components/modules/Hackathon/index.jsx");
 var _jsxFileName = "/Users/victoriatholerus/Documents/cool-prdject/react-storyblok-next-boilerplate/pages/[page].js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -770,6 +855,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 /* components */
+
 
 
 
@@ -795,6 +881,7 @@ const SlugPage = ({
     content
   } = data;
   const imageModuleData = content.components.find(item => item.component === "Image Module");
+  const hackathonData = content.components.find(item => item.component === "Hackathon");
   const gameData = content.components.find(item => item.component === "Brick Game");
   const sniphData = content.components.find(item => item.component === "Sniph");
   const headlineModuleData = content.components.find(item => item.component === "Headline Module");
@@ -802,7 +889,7 @@ const SlugPage = ({
   const thirdheadlineData = content.components.find(item => item.component === "Third Headline");
   const paragraphModuleData = content.components.find(item => item.component === "Paragraph Module");
   const hmimageData = content.components.find(item => item.component === "HM Image");
-  console.log(sniphData);
+  console.log(hackathonData);
   console.log(`🌈 I am getting this content from Storybok`);
   console.log(content);
   const codeString = JSON.stringify(content);
@@ -811,35 +898,35 @@ const SlugPage = ({
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 66
     },
     __self: undefined
   }, headlineModuleData ? __jsx(_components_modules_HeadlineModule__WEBPACK_IMPORTED_MODULE_3__["default"], {
     title: headlineModuleData.title,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 69
     },
     __self: undefined
   }) : null, secondheadlineData ? __jsx(_components_modules_HeadlineModule_SecondHeadline__WEBPACK_IMPORTED_MODULE_7__["default"], {
     title: secondheadlineData.title,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 73
     },
     __self: undefined
   }) : null, thirdheadlineData ? __jsx(_components_modules_HeadlineModule_ThirdHeadline__WEBPACK_IMPORTED_MODULE_8__["default"], {
     title: thirdheadlineData.title,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 76
     },
     __self: undefined
   }) : null, paragraphModuleData ? __jsx(_components_modules_ParagraphModule__WEBPACK_IMPORTED_MODULE_4__["default"], {
     copy: paragraphModuleData.copy,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 80
     },
     __self: undefined
   }) : null, imageModuleData ? __jsx(_components_modules_ImageModule__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -848,7 +935,17 @@ const SlugPage = ({
     link: imageModuleData.Link.url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 84
+    },
+    __self: undefined
+  }) : null, hackathonData ? __jsx(_components_modules_Hackathon__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    imggif: hackathonData.gif,
+    imggiff: hackathonData.giff,
+    imggifff: hackathonData.gifff,
+    copy: hackathonData.copy,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92
     },
     __self: undefined
   }) : null, gameData ? __jsx(_components_modules_BrickGame__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -856,7 +953,7 @@ const SlugPage = ({
     copy: gameData.copy,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 101
     },
     __self: undefined
   }) : null, sniphData ? __jsx(_components_modules_Sniph__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -865,7 +962,7 @@ const SlugPage = ({
     image2: sniphData.image2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 105
     },
     __self: undefined
   }) : null, hmimageData ? __jsx(_components_modules_HmImage__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -873,7 +970,7 @@ const SlugPage = ({
     image: hmimageData.images2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 113
     },
     __self: undefined
   }) : null);
