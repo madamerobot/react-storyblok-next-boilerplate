@@ -6,6 +6,8 @@ const DefaultPage = () => {
     <div>
       <h1>Victoria Tholerus</h1>
       <a href="/project">Projects</a>
+      {"  "}
+      <a href="/aboutme">About Me</a>
     </div>
   )
 }

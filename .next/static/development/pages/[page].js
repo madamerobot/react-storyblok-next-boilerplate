@@ -5038,7 +5038,7 @@ SlugPage.getInitialProps = function _callee(_ref2) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!********************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F%5Bpage%5D&absolutePagePath=%2FUsers%2Fvictoriatholerus%2FDocuments%2Fcool-prdject%2Freact-storyblok-next-boilerplate%2Fpages%2F%5Bpage%5D.js ***!
   \********************************************************************************************************************************************************************************************/
@@ -5061,5 +5061,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js","styles"]]]);
+},[[2,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=[page].js.map
